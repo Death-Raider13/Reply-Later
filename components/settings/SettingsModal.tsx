@@ -21,7 +21,9 @@ export function SettingsModal({ onClose }: SettingsModalProps) {
   const handleNotificationToggle = async () => {
     if (notificationsEnabled) {
       // Can't really disable notifications once granted, just show info
-      toast.info('To disable notifications, please use your browser settings');
+      toast('To disable notifications, please use your browser settings', {
+        icon: 'ℹ️',
+      });
     } else {
       // Request permission
       const permission = await Notification.requestPermission();
