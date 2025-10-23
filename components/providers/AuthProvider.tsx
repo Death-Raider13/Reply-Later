@@ -6,7 +6,7 @@ import { useAuthState } from 'react-firebase-hooks/auth';
 import { auth } from '@/lib/firebase';
 
 interface AuthContextType {
-  user: User | null;
+  user: User | null | undefined;
   loading: boolean;
   error: Error | undefined;
 }
