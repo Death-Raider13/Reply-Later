@@ -7,7 +7,6 @@ import { ReminderCard } from '@/components/reminders/ReminderCard';
 import { AddReminderModal } from '@/components/reminders/AddReminderModal';
 import { ReplySuggestionsModal } from '@/components/ai/ReplySuggestionsModal';
 import { SettingsModal } from '@/components/settings/SettingsModal';
-import { NotificationDebug } from '@/components/debug/NotificationDebug';
 import { reminderService } from '@/lib/firestore';
 import { notificationService } from '@/lib/notifications';
 import { Reminder } from '@/lib/types';
@@ -161,8 +160,6 @@ export function Dashboard() {
         <SettingsModal onClose={() => setShowSettingsModal(false)} />
       )}
 
-      {/* Debug component - remove in production */}
-      <NotificationDebug />
 
       <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
         {/* Stats Cards */}
